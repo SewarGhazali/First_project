@@ -85,7 +85,7 @@ a:active {
 .btn:hover,
 .btn:active {
   border: solid;
-  background-color: #000305;
+  background-color: hsl(240, 100%, 5%);
   cursor: pointer;
 }
 
@@ -172,7 +172,6 @@ a:active {
   /*Menu icon*/
   .list_icon {
     display: block;
-    /*cursor: pointer;*/
   }
   
   .line1, .line2, .line3 {
@@ -198,21 +197,13 @@ a:active {
 .mainHeader nav ul {
   display: none;
 }
-/* .mainHeader nav ul .Wtext {
-  display:inline;
-  float: inline-end;
-  
-} */
 
 
 .mainHeader #myLinks{
   position: relative;
-  display: inline-block;
+  display: block;
 }
-.mainHeader h1 {
-  float: right;
-  margin:-10px -4px;
-}
+
 .mainHeader #myLinks a {
   color:wheat;
   padding: 14px 16px;
@@ -222,6 +213,8 @@ a:active {
   background:  #333;
   right: 0;
   top: 0;
+  text-align: center;
+  overflow: scroll;
 }
 
 .mainHeader #myLinks a:hover {
