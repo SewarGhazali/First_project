@@ -1,0 +1,226 @@
+/*Theam Name: HTML5
+Date: March 2023
+Discription: Make a Frontend small project
+Designed by: Sewar Ghazali */
+
+/*-------------------FOR DESKTOP-------------------*/
+body {
+  background-image: url("assets/images/backgroundPage.jpg");
+  color: #000305;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+}
+a:link,
+a:visited {
+  color: black;
+  font-style: bold;
+}
+a:hover,
+a:active {
+  color: hsl(5, 85%, 63%);
+}
+
+/*---------------------BODY------------------------*/
+.body {
+  margin: 20px auto;
+  width: 70%;
+  clear: both;
+}
+
+.body img {
+  width: 100%;
+  text-align: left;
+}
+
+.smallimg {
+  width: 100%;
+  text-align: left;
+  float: left;
+  padding-inline: 5px;
+}
+.smallimg img {
+  width: 11%;
+  height: 180px;
+  float: left;
+  padding-inline: 5px;
+}
+
+.textWidth {
+  width: 20%;
+  float: left;
+  padding-inline: 5px;
+  text-indent: 1.5px;
+}
+
+.mainContent h1 {
+  width: 40%;
+  font-style: bold;
+  font-size: 36px;
+  text-align: left;
+  float: left;
+}
+
+.essay {
+  width: 50%;
+  font-size: 15px;
+  text-align: left;
+  float: left;
+}
+
+.btn {
+  color: white;
+  background-color: hsl(5, 85%, 63%);
+  border-color: hsl(5, 85%, 63%);
+  text-align: center;
+  padding: 15px 32px;
+  align-self: center;
+  margin-bottom: 20px;
+}
+.btn:hover,
+.btn:active {
+  border: solid;
+  background-color: #000305;
+  cursor: pointer;
+}
+
+/*---------------------MAIN HEADER------------------------*/
+.mainHeader nav ul {
+  text-align: right;
+  list-style: none;
+  margin: 0 auto;
+}
+.mainHeader nav ul li {
+  display: inline;
+  padding-inline: 20px;
+  color: #000305;
+}
+.Wtext {
+  float: left;
+  font-size: xx-large;
+  font-style: bold;
+}
+/*---------------------MAIN CONTENT------------------------*/
+.mainContent {
+  width: 70%;
+  float: left;
+}
+
+/*---------------------The SIDEBAR------------------------*/
+.sideBar {
+  color: hsl(236, 13%, 42%);
+  width: 23%;
+  float: right;
+  margin: 2% 0 0 2%;
+  display: block;
+  font-size: 14px;
+  border: solid;
+  background-color: hsl(240, 100%, 5%);
+  padding: 10px;
+  text-align: left;
+}
+#Line {
+  text-align: center;
+}
+.sideBar a {
+  color: hsl(36, 100%, 99%);
+  font-style: bold;
+}
+.sideBar a:hover,
+a:active {
+  color: hsl(35, 77%, 62%);
+}
+
+.mainHeader .list_icon .myLinks{
+  display: none;
+}
+
+/*---------------------FOOTER------------------------*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*---------------------Mobile display------------------------*/
+
+@media (max-width: 375px) {
+  .body {width: 75% ; font-size: 95% ;}
+  .mainContent {width: 100%;}
+  .sideBar {width: 100%;}
+  .mainContent h1 {width:100%;}
+  .essay {width: 100%;}
+  .smallimg img {width: 30%;}
+  .textWidth {width: 55%;}
+  
+
+  /*Menu icon*/
+  .list_icon {
+    display: block;
+    /*cursor: pointer;*/
+  }
+  
+  .line1, .line2, .line3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  /* Rotate first line */
+  .change .line1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  /* Fade out the second line */
+  .change .line2 {opacity: 0;}
+  
+  /* Rotate last line */
+  .change .line3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+.mainHeader nav ul {
+  display: none;
+}
+/* .mainHeader nav ul .Wtext {
+  display:inline;
+  float: inline-end;
+  
+} */
+
+
+.mainHeader #myLinks{
+  position: relative;
+  display: inline-block;
+}
+.mainHeader h1 {
+  float: right;
+  margin:-10px -4px;
+}
+.mainHeader #myLinks a {
+  color:wheat;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+  background:  #333;
+  right: 0;
+  top: 0;
+}
+
+.mainHeader #myLinks a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.show {display:block;}
+}
+
+
