@@ -148,7 +148,7 @@ a:active {
   border-radius: 10px;
   text-align: left;
 }
-#Line {
+.border {
   text-align: center;
 }
 .sideBar a {
