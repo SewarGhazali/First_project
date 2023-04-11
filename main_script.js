@@ -8,23 +8,20 @@ function changeIcon(x) {
     x.style.display = "block";
   }
 }
-const theNews = [
+let theNews = [
   {
     title: "The Downsides of AI Artistry",
     description: "Will hydrogen-fueled cars ever catch up to EVs?",
-    newsId: 1,
   },
   {
     title: "Hydrogen VS Electric Cars",
     description:
       "What are the possible adverse effects of on-demand AI image generation?",
-    newsId: 2,
   },
   {
     title: "Is VC Funding Drying Up?",
     description: 
       "Private funding by VC firms is down 50% YOY. We take a look at what that means.",
-    newsId: 3,
   }
 ];
 {/* <div>
@@ -39,23 +36,19 @@ const theNews = [
 
         function reorderNews (newsItemId){
           console.log(newsItemId);
-          for (i=0 ; i < theNews.length ; i++){
-              document.addEventListener('click' , theNews[i]);
-              let temp = theNews[0];
-              theNews[0]= theNews[i];
-              theNews[i] = temp;
-          }
+          const temp= theNews[newsItemId];
+          let newArray = theNews.slice(0, newsItemId).concat(theNews.slice(newsItemId + 1));
+          newArray = [{...temp}].concat(newArray);
+          theNews = newArray;
+          renderNews (newArray);
+        }
 
-          }
-        
-
-        
         function renderNews (newsItems){
           let newsHtml = "";
           for (i=0; i < newsItems.length  ; i++) {
                const singleItem = newsItems[i];
                newsHtml+= `<div>
-               <h4><a onclick="reorderNews(${singleItem.newsId})" href="#">${singleItem.title}</a></h4>
+               <h4><a onclick="reorderNews(${i})" href="#">${singleItem.title}</a></h4>
                <p>
                <h5>
                ${singleItem.description}
@@ -67,5 +60,6 @@ const theNews = [
           } 
           document.getElementById("newsList").innerHTML= newsHtml; 
         } 
+        
         renderNews (theNews);
-        reorderNews (theNews);
+       
